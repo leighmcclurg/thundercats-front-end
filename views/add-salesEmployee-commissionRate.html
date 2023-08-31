@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>Add Sales Employee Commission Rate</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Add Sales Employee Commission Rate</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="form" class="bg-light py-5">
+                <div class="container">
+                    <p>Enter sales employee details</p>
+                    <form action="/add-salesEmployee-commissionRate" method="post">
+                        <div class="form-group">
+                            <label for="commissionRate">CommissionRate</label>
+                            <input type="number" min="0" step="any" id="commissionRate" name="commissionRate" class="form-control" value="{{ commissionRate }}" required>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
