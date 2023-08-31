@@ -6,7 +6,7 @@ const axios = require('axios');
 
 module.exports.getSalesEmployees = async function (): Promise<SalesEmployee[]> {
     try {
-        const response = await axios.get('http://localhost:8080/api/salesEmployees')
+        const response = await axios.get('http://localhost:8080/employees/sales')
 
         return response.data
     } catch (e) {

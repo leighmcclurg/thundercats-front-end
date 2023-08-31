@@ -18,7 +18,7 @@
         <main class="container mt-4">
             <section id="salesEmployees" class="mt-4">
                 <h2>Our SalesEmployee</h2>
-                {% if salesEmployees and salesEmployees.length > 0 %}
+                {% if SalesEmployees and SalesEmployees.length > 0 %}
                 <table class="table">
                     <thead>
                         <tr>
@@ -30,7 +30,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for salesEmployee in salesEmployees %}
+                        {% for salesEmployee in SalesEmployees %}
                         <tr>
                             <td>{{ salesEmployee.name }}</td>
                             <td>{{ salesEmployee.salary }}</td>

@@ -5,7 +5,7 @@ const salesEmployeeService = require('../service/salesEmployeeService')
 
 module.exports = function(app: Application) {
 
-    app.get('/salesEmployees', async (req: Request, res: Response) => {
+    app.get('/employees/sales', async (req: Request, res: Response) => {
         let data: SalesEmployee[];
 
         try {
@@ -14,7 +14,7 @@ module.exports = function(app: Application) {
         } catch (e) {
             console.error(e);
         }
-        res.render('list-salesEmployees', { SalesEmployees: data } )
+        res.render('list-salesEmployee', { SalesEmployees: data } )
     })
     
     app.get('/salesEmployees/:id', async (req: Request, res: Response) => {
