@@ -55,3 +55,4 @@ app.get('/', async (req: Request, res: Response) => {
 
 })
 require('./controller/salesEmployeeController')(app);
+require('./controller/deliveryEmployeeController')(app);
