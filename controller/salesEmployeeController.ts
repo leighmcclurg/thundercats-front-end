@@ -111,7 +111,7 @@ app.post('/add-salesEmployee-commissionRate', async (req: Request, res: Response
 })
 
 app.get('/add-salesEmployee-confirmation', async (req: Request, res: Response) => {
-    res.render('add-salesEmpployee-confirmation', req.session.salesEmployee)
+    res.render('add-salesEmployee-confirmation', req.session.salesEmployee)
 })
 
 app.post('/add-salesEmployee-confirmation', async (req: Request, res: Response) => {
