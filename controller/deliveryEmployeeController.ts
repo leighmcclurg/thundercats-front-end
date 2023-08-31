@@ -9,7 +9,6 @@ module.exports = function(app: Application){
         res.render('add-delivery-employee')
     })
 
-
     app.post('/add-delivery-employee', async(req: Request, res: Response) => {
         let data: deliveryEmployee = req.body
         let id : Number
@@ -27,5 +26,17 @@ module.exports = function(app: Application){
         res.render('add-delivery-employee', req.body)
         }
     })
+
+    app.get('/employees/:id', async(req: Request, res: Response) => {
+        let data: deliveryEmployee ={}
+    
+        try {
+            data = await deliveryEmployeeService.getDeliveryEmployeeById(req.params.id)
+        }catch (e) {
+            console.error(e);
+        }
+        res.render('view-delivery-employee', { employee: data } )
+    })
+
 
 }
