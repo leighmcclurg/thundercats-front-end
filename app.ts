@@ -48,11 +48,6 @@ app.listen(3000, () => {
 
 // Routes for express
 
-app.get('/', async (req: Request, res: Response) => {
-    res.render('', {
-        title: ''
-    })
 
-})
 require('./controller/salesEmployeeController')(app);
 require('./controller/deliveryEmployeeController')(app);
