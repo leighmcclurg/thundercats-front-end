@@ -18,6 +18,6 @@ module.exports.getDeliveryEmployeeById = async function (id: number) : Promise<d
         const response = await axios.get('http://localhost:8080/employees/' + id)
         return response.data
     } catch(e) {
-        throw new Error('Could not get employee')
+        throw new Error('Could not find employee')
     }
 }
