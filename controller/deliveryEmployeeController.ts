@@ -27,7 +27,7 @@ module.exports = function(app: Application){
         }
     })
 
-    app.get('/deliveryemployees/:id', async(req: Request, res: Response) => {
+    app.get('/view-delivery-employee/:id', async(req: Request, res: Response) => {
         let data: deliveryEmployee ={}
     
         try {
@@ -38,7 +38,7 @@ module.exports = function(app: Application){
         res.render('view-delivery-employee', { employee: data } )
     })
 
-    app.get('/deliveryemployees/all', async(req: Request, res: Response) => {
+    app.get('/list-delivery-employees', async(req: Request, res: Response) => {
         let data : deliveryEmployee[];
 
         try {
