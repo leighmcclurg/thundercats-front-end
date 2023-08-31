@@ -34,7 +34,7 @@ module.exports.createSalesEmployee = async function (salesEmployee: SalesEmploye
     
     
     try {
-        const response = await axios.post('http://localhost:8080/api/salesEmployees/', salesEmployee)
+        const response = await axios.post('http://localhost:8080/employees/sales/', salesEmployee)
 
         return response.data
     } catch (e) {

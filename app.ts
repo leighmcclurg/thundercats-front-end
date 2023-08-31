@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import session = require("express-session");
+import { SalesEmployee } from "./model/salesEmployee";
 
 
 const express = require('express')
@@ -38,7 +39,6 @@ app.use(session({ secret: 'NOT HARDCODED SECRET', cookie: { maxAge: 60000}}));
 declare module "express-session" {
     interface SessionData {
         salesEmployee: SalesEmployee;
-        deliveryEmployee: DeliveryEmployee;
     }
 }
 
@@ -54,6 +54,4 @@ app.get('/', async (req: Request, res: Response) => {
     })
 
 })
-require('./controller/productController')(app);
-require('./controller/orderController')(app);
-require('./controller/authController')(app);
+require('./controller/salesEmployeeController')(app);

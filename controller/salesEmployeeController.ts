@@ -9,7 +9,7 @@ module.exports = function(app: Application) {
         let data: SalesEmployee[];
 
         try {
-            data = await SalesEmployeeService.getSalesEmployees()
+            data = await salesEmployeeService.getSalesEmployees()
 
         } catch (e) {
             console.error(e);
@@ -83,7 +83,7 @@ app.get('/add-salesEmployee-bankAccountNumber', async (req: Request, res: Respon
 })
 
 app.post('/add-salesEmployee-bankAccountNumber', async (req: Request, res: Response) =>{
-    req.session.product["price"] = req.body.price
+    req.session.salesEmployee["bankAccountNumber"] = req.body.price
 
     res.redirect('/add-salesEmployee-nationalInsuranceNumber')
 })
