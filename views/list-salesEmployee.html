@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>salesEmployees</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>SalesEmployees</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="salesEmployees" class="mt-4">
+                <h2>Our SalesEmployee</h2>
+                {% if salesEmployees and salesEmployees.length > 0 %}
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">BankAccountNumber</th>
+                            <th scope="col">NationalInsuranceNumber</th>
+                            <th scope="col">CommissionRate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for salesEmployee in salesEmployees %}
+                        <tr>
+                            <td>{{ salesEmployee.name }}</td>
+                            <td>{{ salesEmployee.salary }}</td>
+                            <td>{{ salesEmployee.bankAccountNumber }}</td>
+                            <td>{{ salesEmployee.nationalInsuranceNumber }}</td>
+                            <td>{{ salesEmployee.commissionRate }}</td>
+                            <td><a href='salesEmployees/{{ salesEmployee.EmployeeID }}'>View</a></td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+                {% else %}
+                There are no salesEmployees.
+                {% endif %}
+            </section>
+        </main>
+    </body>
+</html>
