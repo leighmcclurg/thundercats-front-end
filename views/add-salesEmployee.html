@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Sales Employee</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Add Sales Employee</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="form" class="bg-light py-5">
+                <div class="container">
+                    <p>Enter Sales Employee details</p>
+                    {% if errormessage %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ errormessage }}
+                    </div>
+                    {% endif %}
+                    <form action="/add-salesEmployeee" method="post">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" value="{{ name }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="salary">Salary</label>
+                            <input type="number" min="0" step="any" id="salaray" name="salaray" class="form-control" value="{{ salary }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bankAccountNumber">BankAccountNumber</label>
+                            <input type="text" id="bankAccountNumber" name="bankAccNum" class="form-control" value="{{ bankAccountNumber }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nationalInsuranceNumber">NationalInsuranceNumber</label>
+                            <input type="text" id="nationalInsuranceNumber" name="nationalInsuranceNum" class="form-control" value="{{ nationalInsuranceNumber }}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="commissionRate">CommissionRate</label>
+                            <input type="number" min="0" step="any" id="commissionRate" name="commissionRate" class="form-control" value="{{ commissionRate }}" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

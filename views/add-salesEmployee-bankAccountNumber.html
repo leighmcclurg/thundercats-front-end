@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="UTF-8">
+        <title>Add Sales Employee Bank Account Number</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <header class="bg-dark text-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Add Sales Employee Bank Account Number</h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container mt-4">
+            <section id="form" class="bg-light py-5">
+                <div class="container">
+                    <p>Enter sales employee details</p>
+                    <form action="/add-salesEmployee-bankAccountNumber" method="post">
+                        <div class="form-group">
+                            <label for="bankAccountNumber">BankAccountNumber</label>
+                            <input type="text" id="bankAccountNumber" name="bankAccNum" class="form-control" value="{{ bankAccountNumber }}" required>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
