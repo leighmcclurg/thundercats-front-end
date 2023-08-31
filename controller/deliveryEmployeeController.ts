@@ -16,7 +16,7 @@ module.exports = function(app: Application){
         try{
             id = await deliveryEmployeeService.createDeliveryEmployee(data)
 
-            res.redirect('/employees/' + id)
+            res.redirect('/deliveryemployees/' + id)
         } catch (e) {
 
             console.error(e)
@@ -27,7 +27,7 @@ module.exports = function(app: Application){
         }
     })
 
-    app.get('/employees/:id', async(req: Request, res: Response) => {
+    app.get('/deliveryemployees/:id', async(req: Request, res: Response) => {
         let data: deliveryEmployee ={}
     
         try {
@@ -38,5 +38,14 @@ module.exports = function(app: Application){
         res.render('view-delivery-employee', { employee: data } )
     })
 
+    app.get('/deliveryemployees/all', async(req: Request, res: Response) => {
+        let data : deliveryEmployee[];
 
+        try {
+            data = await deliveryEmployeeService.getDeliveryEmployees()
+        }catch (e) {
+            console.error(e);
+        }
+        res.render('list-delivery-employees', { deliveryEmployees: data } )
+    } )
 }

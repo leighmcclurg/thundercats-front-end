@@ -8,7 +8,6 @@
 </head>
 
 <body>
-
     <header class ="bg-dark text-light">
         <div class="container">
             <div class="row">
@@ -22,6 +21,7 @@
     <main class="container mt-4">
         <section id="product" class="mt-4">
             {% if deliveryEmployee %}
+
             <h2>Name</h2>
             {{ deliveryEmployee.name }}
 
@@ -36,7 +36,7 @@
 
             {% else %}
 
-            Could not find product.
+            Could not find delivery employee.
             {% endif %}
             </section>
             </main>
