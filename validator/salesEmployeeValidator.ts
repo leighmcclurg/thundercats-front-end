@@ -8,10 +8,10 @@ module.exports.validateSalesEmployee = function (salesEmployee: SalesEmployee): 
         return "Salary is less than £10"
 
     }
-    if (salesEmployee.bankAccountNumber && salesEmployee.bankAccountNumber.length > 16) {
+    if (salesEmployee.bankAccNum && salesEmployee.bankAccNum.length > 16) {
         return "Bank account number can not be over 16 characters"
     }
-    if (salesEmployee.nationalInsuranceNumber && salesEmployee.nationalInsuranceNumber.length > 9){
+    if (salesEmployee.nationalInsuranceNum && salesEmployee.nationalInsuranceNum.length > 9){
     return "National Insurance number can not be greater than 9 characters"
     }
     if (salesEmployee.commissionRate && salesEmployee.commissionRate < 0.2) {

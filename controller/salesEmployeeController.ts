@@ -73,7 +73,7 @@ app.get('/add-salesEmployee-salary', async (req: Request, res: Response) => {
 })
 
 app.post('/add-salesEmployee-salary', async (req: Request, res: Response) =>{
-    req.session.salesEmployee["salary"] = req.body.description
+    req.session.salesEmployee["salary"] = req.body.salary
 
     res.redirect('/add-salesEmployee-bankAccountNumber')
 })
@@ -83,7 +83,7 @@ app.get('/add-salesEmployee-bankAccountNumber', async (req: Request, res: Respon
 })
 
 app.post('/add-salesEmployee-bankAccountNumber', async (req: Request, res: Response) =>{
-    req.session.salesEmployee["bankAccountNumber"] = req.body.price
+    req.session.salesEmployee["bankAccNum"] = req.body.bankAccNum
 
     res.redirect('/add-salesEmployee-nationalInsuranceNumber')
 })
@@ -95,7 +95,7 @@ app.get('/add-salesEmployee-nationalInsuranceNumber', async (req: Request, res: 
 })
 
 app.post('/add-salesEmployee-nationalInsuranceNumber', async (req: Request, res: Response) =>{
-    req.session.salesEmployee["nationalInsuranceNumber"] = req.body.description
+    req.session.salesEmployee["nationalInsuranceNum"] = req.body.nationalInsuranceNum
 
     res.redirect('/add-salesEmployee-commissionRate')
 })
@@ -105,7 +105,7 @@ app.get('/add-salesEmployee-commissionRate', async (req: Request, res: Response)
 })
 
 app.post('/add-salesEmployee-commissionRate', async (req: Request, res: Response) =>{
-    req.session.salesEmployee["commissionRate"] = req.body.description
+    req.session.salesEmployee["commissionRate"] = req.body.commissionRate
 
     res.redirect('/add-salesEmployee-confirmation')
 })

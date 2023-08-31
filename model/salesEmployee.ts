@@ -2,7 +2,7 @@ export class SalesEmployee {
     salesEmployeeID?: number
     name?: string
     salary?: number
-    bankAccountNumber?: string
-    nationalInsuranceNumber?: string
+    bankAccNum?: string
+    nationalInsuranceNum?: string
     commissionRate?: number
 }
