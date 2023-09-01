@@ -16,7 +16,7 @@ module.exports.getSalesEmployees = async function (): Promise<SalesEmployee[]> {
 
 module.exports.getSalesEmployeeById = async function (id: number): Promise<SalesEmployee> {
 try {
-    const response = await axios.get('http://localhost:8080/api/salesEmployees/' + id)
+    const response = await axios.get('http://localhost:8080/employees/sales/' + id)
 
     return response.data
 } catch (e) {
