@@ -16,7 +16,7 @@ module.exports = function(app: Application){
         try{
             id = await deliveryEmployeeService.createDeliveryEmployee(data)
 
-            res.redirect('/deliveryemployees/' + id)
+            res.redirect('/view-delivery-employee/' + id)
         } catch (e) {
 
             console.error(e)
