@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{{ deliveryEmployee.name }}</title>
+<title>{{ employee.name }}</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 
@@ -12,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-        <h1>{{ deliveryEmployee.name }}</h1>
+        <h1>{{ employee.name }}</h1>
         </div>
     </div>
     </div>
@@ -20,19 +20,19 @@
 
     <main class="container mt-4">
         <section id="product" class="mt-4">
-            {% if deliveryEmployee %}
+            {% if employee %}
 
             <h2>Name</h2>
-            {{ deliveryEmployee.name }}
+            {{ employee.name }}
 
             <h2>Salary</h2>
-            {{ deliveryEmployee.salary }}
+            {{ employee.salary }}
 
-            <h2>Salary</h2>
-            {{ deliveryEmployee.bankAccNum }}
+            <h2>Bank Account</h2>
+            {{ employee.bankAccNum }}
 
             <h2>National Insurance Number</h2>
-            {{ nationalInsuranceNum }}
+            {{ employee.nationalInsuranceNum }}
 
             {% else %}
 
