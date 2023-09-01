@@ -39,7 +39,7 @@ module.exports = function(app: Application){
     })
 
     app.get('/list-delivery-employees', async(req: Request, res: Response) => {
-        let data : deliveryEmployee[];
+        let data : deliveryEmployee[] =[];
 
         try {
             data = await deliveryEmployeeService.getDeliveryEmployees()

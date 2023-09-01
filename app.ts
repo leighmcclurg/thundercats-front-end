@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import session = require("express-session");
+const session = require("express-session");
 import { SalesEmployee } from "./model/salesEmployee";
 
 
